@@ -1,0 +1,33 @@
+
+img:hover{
+    opacity: 1;
+}
+h1{
+    color: turquoise;
+    margin-top: auto;
+    text-align: center;
+    font-size: 50px;
+    text-decoration:bold;
+    text-transform: capitalize;
+    padding-top: 150px;
+    
+    
+}
+h2{
+    border: 3px solid blueviolet;
+    color:pink;
+    text-align: center;
+    font-size: 40px;
+    text-decoration: bold;
+    padding-bottom: 50px;
+    
+
+}
+
+.center {      
+   display: flex;
+   justify-content: center;
+    align-items: center;
+    height: 200px;
+        
+    }

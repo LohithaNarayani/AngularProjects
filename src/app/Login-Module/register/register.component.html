@@ -1,0 +1,32 @@
+<div class="container-fluid" id="content">
+    <h1 style="align-content: center;">Registration Form</h1>
+    <br>
+
+    <form #regForm="ngForm" (ngSubmit)="registrationForm(regForm)">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>EmailId</label>
+                    <span class="required-asterick">*</span>
+                    <input type="email" class="form-control" name="email" ngModel required #email="ngModel"
+                    placeholder="Enter EmailId" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$">
+                    <span class="help-block" *ngIf="email.errors?.required && email.touched">EmailId is required</span>
+                    <span class="help-block" *ngIf="email.errors?.pattern && email.touched">EmailId is invalid</span>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Password</label>
+                    <span class="required-asterick">*</span>
+                    <input type="password" class="form-control" name="pass" ngModel required #pass="ngModel"
+                    placeholder="Enter password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}"
+                    maxlength="12">
+                    <span *ngIf="!pass.valid && pass.touched">Password is required</span>
+                    <div *ngIf="pass.errors?.pattern?.maxlength && pass.touched">Password should contain 1caps,1LowerCase,1Symbol
+                    </div>
+            </div>
+        </div>
+            <button type="submit" class="form-control" class="btn btn-primary btn-lg" [disabled]="!regForm.valid">Register</button>
+        
+    </form>
+
+</div>

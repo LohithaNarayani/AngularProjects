@@ -1,0 +1,24 @@
+body{
+    background-image: url('/assets/librarypic.jpg');
+    height: 600px;
+    width: 1500px;
+    opacity: 0.5px;
+}
+
+h1{
+    color:pink;
+    margin-top: auto;
+    text-align: center;
+    text-decoration:bold;
+    text-transform: capitalize;
+    padding-top: 150px; 
+}
+.container-fluid{
+    width: device-width;
+    max-width: 500px;
+    height: 500px;
+    margin:auto;
+    padding: 50px;
+    padding-left: 5px;
+    
+}

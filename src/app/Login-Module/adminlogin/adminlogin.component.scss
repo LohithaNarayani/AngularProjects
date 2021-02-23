@@ -1,0 +1,42 @@
+
+input[type=email],select{
+   
+    width:100%;
+}
+input[type=password],select{
+    
+    width: 100%;
+}
+
+.container-fluid{
+    width: device-width;
+    max-width: 500px;
+    height: device-height;
+    max-height: 1000px;
+    margin:auto;
+    background-color: palegreen;
+    width: 800px;
+    height: 500px;
+    padding: 10px;
+    padding-top: 5px;
+    
+}
+
+input.ng.touched.ng-invalid{
+    border:3px solid red;
+}
+
+input.ng-valid{
+    border:3px solid green;
+}
+.required-asterick{
+    color:red;
+}
+
+img{
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    widows: 100px;
+}

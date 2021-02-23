@@ -1,0 +1,17 @@
+<div class="container-fluid" id="content">
+    <h1>Delete Book Data</h1>
+    <br>
+    
+    <form #deleteForm="ngForm" (ngSubmit)="adminDelete(deleteForm)">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="id">BookId</label>
+                <input type="text" class="form-control" name="id" placeholder="Enter BookID" ngModel required
+                #id="ngModel">
+            </div>
+            <br>
+        </div>
+        <button type="submit" style="margin:5px;" class="btn btn-primary btn-lg">Delete Data</button>
+    </form>
+</div>
+<app-adminviewusers></app-adminviewusers>

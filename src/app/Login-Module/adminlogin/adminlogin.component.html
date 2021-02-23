@@ -1,0 +1,45 @@
+<div class="container-fluid" >
+    <div class="row">
+        
+        <div class="col-lg-7"><br>
+            <img src="/assets/person-circle.svg"  align-content="center" class="img-fluid">
+        <h2 class="font-weight-bold" style="color: black;">Admin Login Form</h2>
+        <form #adminloginForm="ngForm" (ngSubmit)="adminlogin(adminloginForm)" >
+            <div class="form-group" class="form-row" [class.has-error]="!admemail.valid && admemail.touched">
+                <div class="col-lg-7">
+                    <label class="font-weight-bold" style="font-size: large;">EmailId</label>
+                    <span class="required-asterick">*</span>
+                    <input type="email" class="form-control" name="admemail" ngModel required #admemail="ngModel"
+                    placeholder="Enter EmailId" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$">
+                    <span class="help-block" *ngIf="admemail.errors?.required && admemail.touched">EmailId is required</span>
+                    <span class="help-block" *ngIf="admemail.errors?.pattern && admemail.touched">EmailId is invalid</span>
+
+                </div>
+            </div>
+            <br>
+            <div class="form-group" class="form-row">
+                <div class="col-lg-7">
+                    <label class="font-weight-bold" style="font-size: large;">Password</label>
+                    <span class="required-asterick">*</span>
+                    <input type="password" class="form-control" name="password" ngModel required #password="ngModel"
+                    placeholder="Enter password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}"
+                    maxlength="12">
+                    <span *ngIf="!password.valid && password.touched">Password is required</span>
+                    <div *ngIf="password.errors?.pattern?.maxlength && password.touched">Password should contain 1caps,1LowerCase,1Symbol
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <div class="form-row">
+                <div class="col-lg-7">
+                    <button type="submit" class="btn btn-primary btn-lg" [disabled]="!adminloginForm.valid">Login</button>
+                </div>
+            </div>
+            <br>
+
+            <a routerLink="forgotpass" >Forgot Password</a><br>  
+        </form> 
+        </div>
+    </div>
+</div>
+

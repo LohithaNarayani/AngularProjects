@@ -1,0 +1,24 @@
+<div class="container-fluid" id="content">
+    <h1>Book Details</h1>
+    <table class="table table-bordered" style="background-color: burlywood;">
+        <thead>
+            <th>BookId</th>
+            <th>Book Name</th>
+            <th>Author</th>
+            <th>Rackno</th>
+            <th>Book Status</th>
+            <th>Category</th>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let books of bookList">
+                <td>{{books.id}}</td>
+                <td>{{books.bookname}}</td>
+                <td>{{books.author}}</td>
+                <td>{{books.rackno}}</td>
+                <td>{{books.status}}</td>
+                <td>{{books.category}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

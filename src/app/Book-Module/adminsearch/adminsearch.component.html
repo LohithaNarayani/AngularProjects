@@ -1,0 +1,31 @@
+<h1>Search Book Data</h1>
+    <br>
+<nav class="navbar">
+    <input class="form-control" type="text" name="bookname" [(ngModel)]="bookname" (ngModelChange)="Search()"
+    placeholder="Enter bookname to search">
+</nav> 
+    
+<h2>Results for Search</h2>
+<!-- <p *ngIf="searchedBooks.length ==0 && searchForm.submitted"></p> -->
+<table class="table table-bordered" style="background-color: burlywood;">
+    <thead>
+        <th>BookId</th>
+        <th>Book Name</th>
+        <th>Author</th>
+        <th>Rackno</th>
+        <th>BookStatus</th>
+        <th>Category</th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let books of bookList">
+            <td>{{books.id}}</td>
+            <td>{{books.bookname}}</td>
+            <td>{{books.author}}</td>
+            <td>{{books.rackno}}</td>
+            <td>{{books.status}}</td>
+            <td>{{books.category}}</td>
+        </tr>
+    </tbody>
+</table>
+
